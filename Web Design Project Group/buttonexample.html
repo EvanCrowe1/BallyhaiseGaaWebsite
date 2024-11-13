@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="BUTTON.CSS">
+
+<head>
+ <title>Change Background Color</title>
+ <h1>Mad Geeked</h1>
+</head>
+
+
+
+<body>
+ <p id="colorChangeParagraph">This is a
+paragraph. Click, double-click, hover, and
+move away to see the color change.</p>
+ <button
+onclick="changeColor('yellow')"ondblclick="changeColor('blue')">Change Color</button>
+</head>
+
+
+
+
+
+
+<script>
+ var paragraph = document.getElementById("colorChangeParagraph");
+ function changeColor(color) {
+ paragraph.style.backgroundColor = color;
+ }
+ function onMouseOver() {
+ paragraph.style.backgroundColor = 'green';
+ }
+ function onMouseOut() {
+ paragraph.style.backgroundColor = 'red';
+ }
+ // Adding event listeners
+ var button = document.querySelector('button');
+ button.addEventListener('mouseover', onMouseOver);
+ button.addEventListener('mouseout', onMouseOut);
+ </script>
+ 
+
+
+
+
+
+
+</body>
+</html>
